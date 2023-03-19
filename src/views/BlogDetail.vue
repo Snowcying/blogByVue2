@@ -2,7 +2,7 @@
   <div>
     <Header></Header>
 
-    <div class="mblog">
+    <div class="mblog" id="mblog">
       <h2> {{ blog.title }}</h2>
       <el-link  icon="el-icon-edit" v-if="ownBlog">
         <router-link :to="{name: 'BlogEdit', params: {blogId: blog.id}}" >
@@ -65,6 +65,10 @@ export default {
 a{
   text-decoration: none;
   color: #000;
+}
+#mblog{
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 </style>

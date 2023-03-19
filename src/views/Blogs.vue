@@ -1,5 +1,5 @@
 <template>
-  <div class="mcontaner">
+  <div class="mcontaner" id="mcontaner">
     <Header></Header>
 
     <div class="block">
@@ -75,6 +75,10 @@ export default {
 a{
   text-decoration: none;
   color: #000;
+}
+#mcontaner{
+  max-width: 960px;
+  margin: 0 auto;
 }
 /*设置点击后的样式 */
 
