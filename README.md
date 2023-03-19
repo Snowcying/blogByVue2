@@ -1,5 +1,5 @@
 # vue2blog
-
+Vue+SpringBoot+shiro+JWT+MyBatisPlus
 ## Project setup
 ```
 npm install
