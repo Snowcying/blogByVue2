@@ -29,15 +29,22 @@ axios.interceptors.response.use(response => {
     }
   },
   error => {
-    console.log(error)
+    console.log("error:",error)
     if(error.response.data) {
       error.message = error.response.data.msg
     }
 
-    if(error.response.status === 401) {
+      // if(error.response.status === 500) {
+      //     console.log("remove_token")
+      //     store.commit("REMOVE_INFO")
+      //     router.push("/login")
+      // }
+
+    // if(error.response.status === 401) {
+      console.log("remove_token")
       store.commit("REMOVE_INFO")
       router.push("/login")
-    }
+    // }
 
     Element.Message.error(error.message, {duration: 3 * 1000})
     return Promise.reject(error)

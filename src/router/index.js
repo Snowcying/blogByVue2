@@ -39,7 +39,10 @@ const routes = [
   {
     path: '/blog/:blogId/edit',
     name: 'BlogEdit',
-    component: BlogEdit
+    component: BlogEdit,
+    meta: {
+      requireAuth: true
+    },
   },
 ]
 
